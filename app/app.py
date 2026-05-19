@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return jsonify({
         "service": "platform-demo-service",
-        "version": "0.1.0"
+        "version": "0.2.0"
     })
 
 @app.route("/health")
