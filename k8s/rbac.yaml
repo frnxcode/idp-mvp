@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: platform-demo-sa
+  namespace: demo-dev
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: platform-demo-role
+  namespace: demo-dev
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: platform-demo-rolebinding
+  namespace: demo-dev
+subjects:
+  - kind: ServiceAccount
+    name: platform-demo-sa
+    namespace: demo-dev
+roleRef:
+  kind: Role
+  apiGroup: rbac.authorization.k8s.io
+  name: platform-demo-role
