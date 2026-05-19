@@ -1,18 +1,15 @@
 appName: platform-demo-service
 namespace: demo-dev
 replicaCount: 1
-
 image:
-  repository: platform-demo-service
-  tag: "0.1.0"
+  repository: ghcr.io/frnxcode/platform-demo-service
+  tag: "3ad22298ae6aa245c5e227a2ae94c36e4795675c"
   pullPolicy: IfNotPresent
-
 service:
   type: NodePort
   port: 80
   targetPort: 8080
   nodePort: 30080
-
 resources:
   requests:
     cpu: "100m"
@@ -20,6 +17,5 @@ resources:
   limits:
     cpu: "250m"
     memory: "256Mi"
-
 serviceAccount:
   name: platform-demo-sa
