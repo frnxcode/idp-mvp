@@ -3,7 +3,7 @@ namespace: user-profile-dev
 replicaCount: 1
 
 image:
-  repository: user-profile-service
+  repository: platform-demo-service
   tag: "0.1.0"
   pullPolicy: IfNotPresent
 
