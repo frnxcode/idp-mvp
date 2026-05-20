@@ -3,7 +3,7 @@ namespace: demo-dev
 replicaCount: 1
 image:
   repository: 684779207098.dkr.ecr.eu-west-1.amazonaws.com/platform-demo-service
-  tag: "27ffb662b41d026959a6d327c9d0e3b3498c2553"
+  tag: "a1f9b83f9e7924098ad743040d4ac92372fd3f45"
   pullPolicy: IfNotPresent
 service:
   type: NodePort
