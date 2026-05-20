@@ -19,3 +19,8 @@ resources:
     memory: "256Mi"
 serviceAccount:
   name: platform-demo-sa
+
+ingress:
+  enabled: true
+  host: demo.myinfracode.com
+  certificateArn: arn:aws:acm:eu-west-1:684779207098:certificate/5754665b-8744-467c-9f97-16cd260cd1a3
