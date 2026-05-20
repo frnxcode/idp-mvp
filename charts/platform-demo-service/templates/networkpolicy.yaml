@@ -24,3 +24,10 @@ spec:
     - ports:
         - port: {{ .Values.service.targetPort }}
           protocol: TCP
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: monitoring
+      ports:
+        - port: {{ .Values.service.targetPort }}
+          protocol: TCP
