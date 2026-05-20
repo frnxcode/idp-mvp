@@ -3,7 +3,7 @@ namespace: demo-dev
 replicaCount: 1
 image:
   repository: ghcr.io/frnxcode/platform-demo-service
-  tag: "03a7f3fd506eae2577741f78915bf8e3f6ca5d1d"
+  tag: "1ea5a0b6a25782e13820e0b1003adef45ccec84a"
   pullPolicy: IfNotPresent
 service:
   type: NodePort
