@@ -3,7 +3,7 @@ namespace: demo-dev
 replicaCount: 1
 image:
   repository: 684779207098.dkr.ecr.eu-west-1.amazonaws.com/platform-demo-service
-  tag: "13abbc0de9726c9dcc6c42b82ab181fd0c70100b"
+  tag: "a2e64e7e0056366320ccfd21d2396d423e2052df"
   pullPolicy: IfNotPresent
 service:
   type: NodePort
@@ -19,7 +19,6 @@ resources:
     memory: "256Mi"
 serviceAccount:
   name: platform-demo-sa
-
 ingress:
   enabled: true
   host: demo.myinfracode.com
