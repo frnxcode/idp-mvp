@@ -1,0 +1,21 @@
+appName: user-profile-service
+namespace: demo-dev
+replicaCount: 1
+image:
+  repository: ghcr.io/frnxcode/user-profile-service
+  tag: "1ea5a0b6a25782e13820e0b1003adef45ccec84a"
+  pullPolicy: IfNotPresent
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+  nodePort: 30080
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "250m"
+    memory: "256Mi"
+serviceAccount:
+  name: platform-demo-sa
