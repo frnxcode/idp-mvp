@@ -23,6 +23,12 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.service.targetPort }}
+          env:
+            - name: APP_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: demo-service-secret
+                  key: APP_SECRET
           resources:
             {{- nindent 12 (toYaml .Values.resources) }}
           readinessProbe:
