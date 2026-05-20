@@ -2,8 +2,8 @@ appName: platform-demo-service
 namespace: demo-dev
 replicaCount: 1
 image:
-  repository: ghcr.io/frnxcode/platform-demo-service
-  tag: "e0129d5b47c7c688c17ebb375a60187fb36a4339"
+  repository: 684779207098.dkr.ecr.eu-west-1.amazonaws.com/platform-demo-service
+  tag: "13abbc0de9726c9dcc6c42b82ab181fd0c70100b"
   pullPolicy: IfNotPresent
 service:
   type: NodePort
